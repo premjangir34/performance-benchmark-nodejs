@@ -8,6 +8,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+app.use(require('express-status-monitor')());
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
